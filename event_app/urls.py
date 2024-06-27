@@ -3,9 +3,10 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
-    path('',views.getEvents),
-    path("/events/create/",views.createEvent),
-    path("/events/<str:pk>/",views.getEvent),
-    path("/events/<str:pk>/update/",views.updateEvent),
-    path("/events/<str:pk>/delete",views.deleteEvent)
+    # The parent path is path("", include("event_app.urls"))
+    path('', views.getEvents, name='get-events'),
+    path('events/create/', views.createEvent, name='create-event'),
+    path('events/<str:pk>/', views.getEvent, name='get-event'),
+    path('events/<str:pk>/update/', views.updateEvent, name='update-event'),
+    path('events/<str:pk>/delete/', views.deleteEvent, name='delete-event'),
 ]

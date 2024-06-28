@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'event_app',
     'rest_framework',
     'artist',
+    'ticket',
+    'venue',
+    'purchase_ticket',
 ]
 
 MIDDLEWARE = [

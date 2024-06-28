@@ -32,4 +32,4 @@ class Ticket(models.Model):
     def get_number_tickets(self):
       
         return Venue.venue_size         #venue size determines the number of tickets that can be purchased
-    
+        

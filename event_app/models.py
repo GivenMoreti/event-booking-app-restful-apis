@@ -13,7 +13,7 @@ class Event(models.Model):
     event_modified = models.DateTimeField(auto_now=True)
 
     def __Str__(self):
-        return f"The title of the event is {self.event_title}"
+        return f"{self.event_title} at {self.event_location} {self.event_venue}"
     
     class Meta:
         ordering = ["-event_created"]
